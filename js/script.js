@@ -1,4 +1,4 @@
-const launchDate = new Date('April 29, 2021, 0:00:00')
+const launchDate = new Date('April 5, 2021, 18:38:00')
 const timecards = document.querySelectorAll('.time-card')
 const secondsTimeCard = document.querySelector('.time-card[data-type="seconds"]')
 const minutesTimeCard = document.querySelector('.time-card[data-type="minutes"]')
@@ -9,10 +9,14 @@ let secondsbetween
 let minutesbetween
 let hoursbetween
 let daysbetween
+let interval
 
 function initDate(date) {
 	const currentDate = new Date()
 	const launchDate = new Date(date)
+
+	if (launchDate < currentDate) return alert('Over')
+
 	let timediff = launchDate.getTime() - currentDate.getTime()
 	daysbetween = Math.floor(timediff / 1000 / 3600 / 24)
 	hoursbetween = Math.floor((timediff / 1000 / 3600) % 24)
@@ -36,6 +40,12 @@ function updateUI() {
 	if (hoursbetween == -1) {
 		daysbetween--
 		hoursbetween = 23
+	}
+
+	if (daysbetween == -1) {
+		clearInterval(interval)
+		alert('OVER!')
+		return
 	}
 
 	changeTime(daysbetween, hoursbetween, minutesbetween, secondsbetween)
