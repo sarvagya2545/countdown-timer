@@ -1,4 +1,4 @@
-const launchDate = new Date('April 29, 2021, 0:00:00')
+const launchDate = new Date().getTime() + 14 * 24 * 60 * 60 * 1000
 const timecards = document.querySelectorAll('.time-card')
 const secondsTimeCard = document.querySelector('.time-card[data-type="seconds"]')
 const minutesTimeCard = document.querySelector('.time-card[data-type="minutes"]')
@@ -56,7 +56,7 @@ function changeTime() {
 
 	if (args.length > 1) {
 		Array.from(timecards).forEach(function (card, index) {
-			card.textContent = `${Math.floor(args[index])}`
+			card.textContent = `${Math.floor(args[index]) < 10 ? '0' + String(Math.floor(args[index])) : Math.floor(args[index])}`
 		})
 	}
 }
