@@ -1,31 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+
   <title>Frontend Mentor | Launch countdown timer</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/9a34e91c28.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
+  <div class="bg"></div>
 
-  We're launching soon
+  <div class="container">
+    <h1>We're launching soon</h1>
 
-  Days
-  Hours
-  Minutes
-  Seconds
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+
+    <div class="timers">
+      <div class="timer">
+        <div class="time-card">
+          08
+        </div>
+        <p>DAYS</p>
+      </div>
+
+      <div class="timer">
+        <div class="time-card">
+          23
+        </div>
+        <p>HOURS</p>
+      </div>
+
+      <div class="timer">
+        <div class="time-card">
+          55
+        </div>
+        <p>MINUTES</p>
+      </div>
+
+      <div class="timer">
+        <div class="time-card">
+          41
+        </div>
+        <p>seconds</p>
+      </div>
+    </div>
+
   </div>
+
+
+  <footer>
+    <div class="social">
+      <i class="fab fa-facebook-square"></i>
+      <i class="fab fa-pinterest"></i>
+      <i class="fab fa-instagram"></i>
+    </div>
+  </footer>
 </body>
+
 </html>

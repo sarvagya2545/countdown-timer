@@ -1,0 +1,111 @@
+/* BASE STYLES */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+:root {
+	--col-grayish-blue: hsl(237, 18%, 59%);
+	--col-soft-red: hsl(345, 95%, 68%);
+	--col-white: hsl(0, 0%, 100%);
+	--col-dark-desaturated-blue: hsl(236, 21%, 26%);
+	--col-dark-blue-1: hsl(235, 16%, 14%);
+	--col-dark-blue-2: hsl(234, 17%, 12%);
+}
+
+/* BACKGROUND AND MAIN BODY */
+
+body {
+	background-image: url('../images/bg-stars.svg');
+	height: 100vh;
+	width: 100vw;
+	background-position: center;
+	/* background-color: var(--col-dark-desaturated-blue); */
+	background-color: #201e29;
+	font-family: 'Red Hat Text', sans-serif;
+	font-size: 14px;
+}
+
+.bg {
+	position: fixed;
+	bottom: 0;
+	background-image: url('../images/pattern-hills.svg');
+	background-repeat: no-repeat;
+	background-position: bottom center;
+	background-size: contain;
+	height: 200px;
+	width: 100vw;
+}
+
+.container,
+.timers,
+.timer,
+.time-card {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.container {
+	flex-direction: column;
+	height: 80%;
+}
+
+.container h1,
+.timer p {
+	color: #fff;
+	text-transform: uppercase;
+	letter-spacing: 10px;
+	text-indent: 10px;
+}
+
+/* TIMER CARDS STYLING */
+
+.timers {
+	margin-top: 100px;
+}
+
+.timer {
+	flex-direction: column;
+	margin: 1rem;
+}
+
+.timer p {
+	margin-top: 20px;
+	color: var(--col-grayish-blue);
+	text-align: center;
+}
+
+.time-card {
+	background-color: var(--col-dark-desaturated-blue);
+	color: var(--col-soft-red);
+	font-size: 70px;
+	padding: 0.4em;
+	border-radius: 8px;
+	width: 148px;
+}
+
+/* SOCIAL ICONS SECTIONS */
+
+footer {
+	z-index: 100;
+	position: relative;
+	margin-top: 80px;
+}
+
+.social {
+	display: flex;
+	justify-content: center;
+}
+
+.fab {
+	color: var(--col-grayish-blue);
+	font-size: 30px;
+	margin-right: 20px;
+}
+
+.fab:hover {
+	color: var(--col-soft-red);
+	cursor: pointer;
+}
