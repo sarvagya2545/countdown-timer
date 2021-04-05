@@ -1,4 +1,4 @@
-const launchDate = new Date('April 5, 2021, 18:38:00')
+const launchDate = new Date('April 29, 2021, 0:00:00')
 const timecards = document.querySelectorAll('.time-card')
 const secondsTimeCard = document.querySelector('.time-card[data-type="seconds"]')
 const minutesTimeCard = document.querySelector('.time-card[data-type="minutes"]')
